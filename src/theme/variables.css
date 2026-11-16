@@ -1,2 +1,106 @@
-/* For information on how to create your own theme, please refer to:
-http://ionicframework.com/docs/theming/ */
+/* Design tokens for Clientes App.
+ * Ionic reads the --ion-* variables; the --app-* variables drive the custom
+ * page styles so light and dark system palettes stay coherent.
+ */
+
+:root {
+  color-scheme: light dark;
+
+  --app-font-body: 'Manrope', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --app-font-display: 'Bricolage Grotesque', 'Manrope', ui-sans-serif, system-ui, sans-serif;
+  --app-font-mono: ui-monospace, 'SFMono-Regular', 'Menlo', 'Consolas', monospace;
+
+  --app-paper: #f6f4ef;
+  --app-surface: #fffdfa;
+  --app-surface-soft: #f0ede6;
+  --app-ink: #17151c;
+  --app-ink-soft: #5d586b;
+  --app-ink-faint: #8b8696;
+  --app-line: #e4dfd4;
+  --app-line-strong: #cfc8b9;
+
+  --app-accent: #4b2ee6;
+  --app-accent-strong: #3a1fca;
+  --app-accent-soft: #ebe7ff;
+  --app-accent-ink: #2c18ab;
+  --app-accent-contrast: #ffffff;
+  --app-focus-ring: rgba(75, 46, 230, 0.18);
+  --app-flare: #f4542f;
+
+  --app-glow-a: rgba(75, 46, 230, 0.1);
+  --app-glow-b: rgba(244, 84, 47, 0.08);
+  --app-code-bg: rgba(23, 21, 28, 0.06);
+  --app-row-hover: rgba(75, 46, 230, 0.06);
+
+  --app-warn-bg: #fff5e3;
+  --app-warn-line: #ecc98a;
+  --app-warn-ink: #7a4a06;
+  --app-danger: #b92727;
+  --app-danger-bg: #fdeceb;
+  --app-danger-line: #f0b6b2;
+  --app-ok: #0d7550;
+  --app-ok-bg: #e6f7ef;
+  --app-ok-line: #a5e0c5;
+
+  --app-shadow-sm: 0 1px 2px rgba(23, 21, 28, 0.04), 0 10px 26px -18px rgba(23, 21, 28, 0.28);
+  --app-shadow-md: 0 2px 4px rgba(23, 21, 28, 0.05), 0 24px 60px -32px rgba(23, 21, 28, 0.38);
+  --app-radius: 18px;
+
+  --ion-font-family: var(--app-font-body);
+  --ion-background-color: var(--app-paper);
+  --ion-text-color: var(--app-ink);
+  --ion-color-primary: var(--app-accent);
+  --ion-color-primary-rgb: 75, 46, 230;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-shade: #4228ca;
+  --ion-color-primary-tint: #5d43e9;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --app-paper: #111014;
+    --app-surface: #1a1820;
+    --app-surface-soft: #201e27;
+    --app-ink: #f4f2f7;
+    --app-ink-soft: #b4aec2;
+    --app-ink-faint: #8d879b;
+    --app-line: #2e2b37;
+    --app-line-strong: #464153;
+
+    --app-accent: #8c78ff;
+    --app-accent-strong: #a291ff;
+    --app-accent-soft: #251f3e;
+    --app-accent-ink: #c8beff;
+    --app-accent-contrast: #14111f;
+    --app-focus-ring: rgba(140, 120, 255, 0.26);
+    --app-flare: #ff7c5a;
+
+    --app-glow-a: rgba(140, 120, 255, 0.16);
+    --app-glow-b: rgba(255, 124, 90, 0.1);
+    --app-code-bg: rgba(255, 255, 255, 0.08);
+    --app-row-hover: rgba(140, 120, 255, 0.09);
+
+    --app-warn-bg: #2a2113;
+    --app-warn-line: #5c4620;
+    --app-warn-ink: #f5ca79;
+    --app-danger: #ff9a9a;
+    --app-danger-bg: #2d1517;
+    --app-danger-line: #5c2a2e;
+    --app-ok: #74e2b3;
+    --app-ok-bg: #10291f;
+    --app-ok-line: #1f4e3a;
+
+    --app-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4), 0 10px 26px -18px rgba(0, 0, 0, 0.65);
+    --app-shadow-md: 0 2px 4px rgba(0, 0, 0, 0.4), 0 26px 64px -32px rgba(0, 0, 0, 0.8);
+
+    --ion-background-color: var(--app-paper);
+    --ion-text-color: var(--app-ink);
+    --ion-color-primary: var(--app-accent);
+    --ion-color-primary-rgb: 140, 120, 255;
+    --ion-color-primary-contrast: #14111f;
+    --ion-color-primary-contrast-rgb: 20, 17, 31;
+    --ion-color-primary-shade: #7763df;
+    --ion-color-primary-tint: #9a89ff;
+  }
+}

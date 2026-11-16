@@ -1,0 +1,348 @@
+/* Shared layout, typography and controls for every page of Clientes App. */
+
+html,
+body {
+  background: var(--app-paper);
+}
+
+body {
+  margin: 0;
+  color: var(--app-ink);
+  font-family: var(--app-font-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  color: var(--app-ink);
+  font-family: var(--app-font-display);
+  font-weight: 750;
+  letter-spacing: -0.025em;
+  line-height: 1.12;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: var(--app-accent-ink);
+}
+
+::selection {
+  background: var(--app-accent);
+  color: var(--app-accent-contrast);
+}
+
+:focus-visible {
+  border-radius: 6px;
+  outline: 3px solid var(--app-accent);
+  outline-offset: 3px;
+}
+
+/* Ionic content background: warm paper plus two soft light sources. */
+.app-content {
+  --background:
+    radial-gradient(1100px 620px at 8% -12%, var(--app-glow-a), transparent 62%),
+    radial-gradient(900px 520px at 102% -4%, var(--app-glow-b), transparent 58%),
+    var(--app-paper);
+}
+
+.page-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(28px, 4vw, 44px);
+  width: min(1140px, 100%);
+  margin: 0 auto;
+  padding: clamp(28px, 5vw, 56px) clamp(18px, 4vw, 40px) clamp(64px, 9vw, 112px);
+}
+
+/* --- Page header ---------------------------------------------------------- */
+
+.page-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 22px 32px;
+}
+
+.page-head-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 62ch;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--app-accent-ink);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.eyebrow::before {
+  width: 24px;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--app-accent), var(--app-flare));
+  content: '';
+}
+
+.page-title {
+  font-size: clamp(2.35rem, 5.2vw, 3.6rem);
+  font-weight: 780;
+  letter-spacing: -0.04em;
+  line-height: 1.02;
+}
+
+.page-lead {
+  max-width: 58ch;
+  color: var(--app-ink-soft);
+  font-size: clamp(1rem, 0.35vw + 0.93rem, 1.1rem);
+  line-height: 1.7;
+}
+
+.head-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+/* --- Surfaces ------------------------------------------------------------ */
+
+.card {
+  background: var(--app-surface);
+  border: 1px solid var(--app-line);
+  border-radius: var(--app-radius);
+  box-shadow: var(--app-shadow-sm);
+}
+
+.section-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 18px;
+}
+
+.section-title {
+  font-size: 1.2rem;
+}
+
+/* --- Buttons ------------------------------------------------------------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 46px;
+  padding: 0 20px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: none;
+  color: var(--app-ink);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.94rem;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  transition:
+    transform 0.18s ease,
+    background-color 0.18s ease,
+    border-color 0.18s ease,
+    color 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.btn ion-icon {
+  font-size: 18px;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn-primary {
+  background: var(--app-accent);
+  color: var(--app-accent-contrast);
+  box-shadow: 0 12px 26px -16px var(--app-accent);
+}
+
+.btn-primary:hover {
+  background: var(--app-accent-strong);
+}
+
+.btn-ghost {
+  background: var(--app-surface);
+  border-color: var(--app-line-strong);
+  color: var(--app-ink);
+}
+
+.btn-ghost:hover {
+  background: var(--app-surface-soft);
+  border-color: var(--app-ink-faint);
+}
+
+.btn-quiet {
+  color: var(--app-ink-soft);
+}
+
+.btn-quiet:hover {
+  background: var(--app-surface-soft);
+  color: var(--app-ink);
+}
+
+.btn:disabled,
+.btn:disabled:hover {
+  box-shadow: none;
+  cursor: not-allowed;
+  opacity: 0.55;
+  transform: none;
+}
+
+/* Inline spinner used inside buttons. */
+.btn .btn-spinner {
+  width: 16px;
+  height: 16px;
+}
+
+/* --- Badges, chips and banners ------------------------------------------- */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 11px;
+  border-radius: 999px;
+  background: var(--app-accent-soft);
+  color: var(--app-accent-ink);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.banner {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 16px 18px;
+  border: 1px solid var(--app-warn-line);
+  border-radius: 14px;
+  background: var(--app-warn-bg);
+  color: var(--app-warn-ink);
+}
+
+.banner-icon {
+  flex: none;
+  margin-top: 1px;
+  font-size: 22px;
+}
+
+.banner-title {
+  font-family: var(--app-font-display);
+  font-size: 0.98rem;
+  font-weight: 750;
+  letter-spacing: -0.01em;
+}
+
+.banner-text {
+  margin-top: 3px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.banner code {
+  padding: 1px 5px;
+  border-radius: 5px;
+  background: var(--app-code-bg);
+  font-family: var(--app-font-mono);
+  font-size: 0.82em;
+}
+
+.banner-danger {
+  border-color: var(--app-danger-line);
+  background: var(--app-danger-bg);
+  color: var(--app-danger);
+}
+
+.banner-success {
+  border-color: var(--app-ok-line);
+  background: var(--app-ok-bg);
+  color: var(--app-ok);
+}
+
+/* --- Motion -------------------------------------------------------------- */
+
+@keyframes app-rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .rise {
+    animation: app-rise 0.55s cubic-bezier(0.22, 0.7, 0.24, 1) both;
+    animation-delay: calc(var(--rise-delay, 0) * 70ms);
+  }
+
+  .rise-late {
+    animation: app-rise 0.6s cubic-bezier(0.22, 0.7, 0.24, 1) both;
+    animation-delay: 0.18s;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+/* --- Helpers ------------------------------------------------------------- */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.stack-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}

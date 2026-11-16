@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#17141f" />
+      <stop offset="0.55" stop-color="#121017" />
+      <stop offset="1" stop-color="#0c0a10" />
+    </linearGradient>
+    <radialGradient id="glowV" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#6b4dff" stop-opacity="0.55" />
+      <stop offset="1" stop-color="#6b4dff" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="glowC" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#ff6a45" stop-opacity="0.4" />
+      <stop offset="1" stop-color="#ff6a45" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8c78ff" />
+      <stop offset="1" stop-color="#ff7c5a" />
+    </linearGradient>
+    <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M64 0H0V64" fill="none" stroke="#ffffff" stroke-opacity="0.045" stroke-width="1" />
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)" />
+  <rect width="1600" height="900" fill="url(#grid)" />
+  <circle cx="260" cy="120" r="560" fill="url(#glowV)" />
+  <circle cx="1480" cy="860" r="520" fill="url(#glowC)" />
+
+  <!-- decorative orbit -->
+  <g fill="none" stroke="#8c78ff" stroke-opacity="0.22">
+    <circle cx="1395" cy="235" r="270" stroke-width="2" />
+    <circle cx="1395" cy="235" r="196" stroke-width="1.5" stroke-dasharray="3 10" />
+  </g>
+  <circle cx="1395" cy="235" r="12" fill="#ff7c5a" />
+  <circle cx="1160" cy="330" r="6" fill="#8c78ff" />
+
+  <g font-family="DejaVu Sans, Liberation Sans, sans-serif">
+    <text x="120" y="152" font-size="22" font-weight="bold" letter-spacing="8" fill="#b9b1ff">
+      CLIENTES APP
+    </text>
+    <rect x="120" y="178" width="84" height="4" rx="2" fill="url(#line)" />
+
+    <text x="116" y="330" font-size="104" font-weight="bold" letter-spacing="-3" fill="#f8f6ff">
+      Un stack moderno
+    </text>
+    <text x="116" y="452" font-size="104" font-weight="bold" letter-spacing="-3" fill="#f8f6ff">
+      para <tspan fill="#a893ff">clientes</tspan> reales
+    </text>
+
+    <text x="120" y="524" font-size="29" fill="#a7a0bb">
+      Interfaz, datos y despliegue en un mismo repositorio.
+    </text>
+
+    <!-- stack pills -->
+    <g>
+      <rect x="120" y="592" width="186" height="76" rx="38" fill="#ffffff" fill-opacity="0.055" stroke="#ffffff" stroke-opacity="0.16" />
+      <circle cx="154" cy="630" r="7" fill="#61dafb" />
+      <text x="176" y="641" font-size="27" font-weight="bold" fill="#f4f2ff">React</text>
+    </g>
+    <g>
+      <rect x="324" y="592" width="244" height="76" rx="38" fill="#ffffff" fill-opacity="0.055" stroke="#ffffff" stroke-opacity="0.16" />
+      <circle cx="358" cy="630" r="7" fill="#3178c6" />
+      <text x="380" y="641" font-size="27" font-weight="bold" fill="#f4f2ff">TypeScript</text>
+    </g>
+    <g>
+      <rect x="586" y="592" width="176" height="76" rx="38" fill="#ffffff" fill-opacity="0.055" stroke="#ffffff" stroke-opacity="0.16" />
+      <circle cx="620" cy="630" r="7" fill="#4f46e5" />
+      <text x="642" y="641" font-size="27" font-weight="bold" fill="#f4f2ff">Ionic</text>
+    </g>
+    <g>
+      <rect x="780" y="592" width="242" height="76" rx="38" fill="#ffffff" fill-opacity="0.055" stroke="#ffffff" stroke-opacity="0.16" />
+      <circle cx="814" cy="630" r="7" fill="#3ecf8e" />
+      <text x="836" y="641" font-size="27" font-weight="bold" fill="#f4f2ff">Supabase</text>
+    </g>
+    <g>
+      <rect x="1040" y="592" width="182" height="76" rx="38" fill="#ffffff" fill-opacity="0.055" stroke="#ffffff" stroke-opacity="0.16" />
+      <circle cx="1074" cy="630" r="7" fill="#ffffff" />
+      <text x="1096" y="641" font-size="27" font-weight="bold" fill="#f4f2ff">Vercel</text>
+    </g>
+
+    <line x1="120" y1="786" x2="1480" y2="786" stroke="#ffffff" stroke-opacity="0.12" />
+    <text x="120" y="826" font-size="22" fill="#7f7894">
+      appclients-react · Reto 2
+    </text>
+    <text x="1480" y="826" font-size="22" fill="#7f7894" text-anchor="end">
+      PostgREST · Supabase · Vercel
+    </text>
+  </g>
+</svg>
