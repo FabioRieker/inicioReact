@@ -101,13 +101,12 @@ const AboutPage: React.FC = () => {
           <figure className="about-figure figure-frame rise-late">
             <img
               src="/about/stack.webp"
-              alt="Banner del stack del proyecto con los nombres React, TypeScript, Ionic, Supabase y Vercel"
+              alt="Banner del stack: React, TypeScript, Ionic, Supabase y Vercel"
               width={1600}
               height={900}
-              loading="lazy"
               decoding="async"
             />
-            <figcaption>El stack del proyecto, de la interfaz al despliegue.</figcaption>
+            <figcaption>Stack técnico del proyecto: interfaz, datos y despliegue.</figcaption>
           </figure>
 
           <section className="video-section" aria-labelledby="video-title">
